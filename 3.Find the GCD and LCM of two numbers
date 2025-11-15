@@ -1,0 +1,16 @@
+public class GCDLCM {
+    static int gcd(int a, int b){
+        if(b == 0) return a;
+        return gcd(b, a % b);
+    }
+
+    public static void main(String[] args){
+        int a = 12, b = 18;
+
+        int g = gcd(a, b);
+        int l = (a * b) / g;
+
+        System.out.println("GCD = " + g);
+        System.out.println("LCM = " + l);
+    }
+}
